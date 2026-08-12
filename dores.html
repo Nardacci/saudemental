@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental - Acolhimento</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #e1bee7;
+            --text-color: #333;
+            --light-bg: #f3e5f5;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--white);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-bg);
+            height: 70px;
+            flex-shrink: 0;
+        }
+
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+
+        nav { display: flex; gap: 15px; align-items: center; }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--primary-color); background-color: var(--light-bg); }
+        .btn-nav { background-color: var(--primary-color) !important; color: var(--white) !important; }
+
+        main {
+            flex: 1;
+            padding: 20px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 { color: var(--primary-color); font-size: 30px; margin: 0 0 5px 0; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 15px; }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #faf5fb;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #e0d4e7;
+        }
+
+        .card-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+        .card h3 { color: var(--primary-color); margin: 0 0 8px 0; font-size: 18px; }
+        .card p { color: #555; font-size: 14px; margin: 0; line-height: 1.5; }
+
+        footer {
+            background-color: #2a0b52;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 12px 8%;
+            font-size: 13px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Saúde Mental</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">O Que Fazemos</a>
+            <a href="dores.html" class="active">Acolhimento</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="cadastro.html" class="btn-nav">Agendar / Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>As Dores que Acolhemos</h2>
+        <p class="subtitle">Morar em outro país traz conquistas, mas também desafios emocionais profundos.</p>
+
+        <div class="grid-cards">
+            <div class="card">
+                <span class="card-icon">🌍</span>
+                <h3>Choque Cultural & Adaptação</h3>
+                <p>Sensação de estranhamento com costumes locais, rotina acelerada e a difícil busca por pertencimento.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">💔</span>
+                <h3>Saudade & Distanciamento</h3>
+                <p>O peso do isolamento familiar, a ausência em momentos marcantes no Brasil e o sentimento de solidão.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🧠</span>
+                <h3>Ansiedade & Sobrecarga</h3>
+                <p>Estresse financeiro, incertezas jurídicas/profissionais e a pressão contínua de "fazer dar certo".</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🗣️</span>
+                <h3>Barreira Idiomática</h3>
+                <p>A dificuldade de expressar dores profundas em inglês. Terapia na sua língua materna faz toda diferença.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Projeto Saúde Mental | Tecnologia • Processos • Pessoas
+    </footer>
+
+</body>
+</html>

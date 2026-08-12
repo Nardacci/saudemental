@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Sem Fronteiras - Para Empresas</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #e1bee7;
+            --accent-color: #7b1fa2;
+            --text-color: #333;
+            --light-bg: #f3e5f5;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            color: var(--text-color);
+            background-color: var(--white);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Zero rolagem global */
+        }
+
+        /* Header Padronizado */
+        header {
+            background-color: var(--white);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-bg);
+            height: 70px;
+            flex-shrink: 0;
+        }
+
+        .logo { font-size: 22px; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+
+        nav { display: flex; gap: 12px; align-items: center; }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--primary-color); background-color: var(--light-bg); }
+        .btn-nav { background-color: var(--primary-color) !important; color: var(--white) !important; }
+
+        /* Conteúdo Principal Full Screen */
+        main {
+            flex: 1;
+            padding: 20px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 { color: var(--primary-color); font-size: 28px; margin: 0 0 5px 0; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 15px; }
+
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .pilar-card {
+            background-color: #faf5fb;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #e0d4e7;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .pilar-card h3 { 
+            color: var(--primary-color); 
+            margin: 0 0 10px 0; 
+            font-size: 18px; 
+            border-bottom: 2px solid var(--secondary-color); 
+            padding-bottom: 6px; 
+        }
+
+        .pilar-card p { color: #555; font-size: 13px; margin: 0 0 10px 0; line-height: 1.5; }
+        .pilar-tag { 
+            font-size: 11px; 
+            font-weight: bold; 
+            color: var(--primary-color); 
+            background-color: var(--secondary-color); 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            align-self: flex-start; 
+        }
+
+        .cta-container { text-align: center; margin-top: 25px; }
+
+        .btn-b2b {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(74, 20, 140, 0.2);
+        }
+
+        .btn-b2b:hover { background-color: var(--accent-color); }
+
+        footer {
+            background-color: #2a0b52;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 12px 8%;
+            font-size: 13px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Saúde Mental Sem Fronteiras</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">O Que Fazemos</a>
+            <a href="empresas.html" class="active">Para Empresas</a>
+            <a href="dores.html">Acolhimento</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="cadastro.html" class="btn-nav">Agendar / Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Saúde Emocional que Gera Desempenho</h2>
+        <p class="subtitle">Programa de Acompanhamento Psicológico Corporativo para Colaboradores Brasileiros nos EUA[cite: 1].</p>
+
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <div>
+                    <h3>1. Employee Well-being</h3>
+                    <p>Atendimento psicológico em português, culturalmente adaptado para brasileiros vivendo a experiência migratória nos Estados Unidos[cite: 1].</p>
+                </div>
+                <span class="pilar-tag">Acolhimento & Cultura</span>
+            </div>
+
+            <div class="pilar-card">
+                <div>
+                    <h3>2. Workplace Mental Health</h3>
+                    <p>Prevenção de riscos psicossociais alinhada às diretrizes de saúde e segurança ocupacional (OSHA), reduzindo turnover e estresse[cite: 1].</p>
+                </div>
+                <span class="pilar-tag">Conformidade & Saúde</span>
+            </div>
+
+            <div class="pilar-card">
+                <div>
+                    <h3>3. Performance & Productivity</h3>
+                    <p>Desenvolvimento de resiliência emocional, foco, tomada de decisão e melhora no clima organizacional e relações de trabalho[cite: 1].</p>
+                </div>
+                <span class="pilar-tag">Resultados & Foco</span>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="cadastro.html" class="btn-b2b">Solicitar Proposta para sua Empresa</a>
+        </div>
+    </main>
+
+    <footer>
+        Saúde Mental Sem Fronteiras | Tecnologia • Processos • Pessoas
+    </footer>
+
+</body>
+</html>

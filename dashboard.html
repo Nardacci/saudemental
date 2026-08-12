@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Sem Fronteiras - Início (Dashboard)</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --rose-accent: #c48b9f;
+            --secondary-color: #e1bee7;
+            --text-color: #333;
+            --light-bg: #faf5fb;
+            --white: #ffffff;
+            --alert-red: #d32f2f;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0; color: var(--text-color);
+            background-color: var(--white); height: 100vh;
+            display: flex; flex-direction: column; overflow: hidden;
+        }
+
+        header {
+            background-color: var(--white); padding: 10px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #f0e2ec; height: 70px; flex-shrink: 0;
+        }
+
+        .prof-info { text-align: left; }
+        .prof-name { font-size: 16px; font-weight: bold; color: var(--rose-accent); margin: 0; }
+        .prof-crp { font-size: 11px; color: #777; margin: 0; }
+
+        nav { display: flex; gap: 12px; align-items: center; }
+        nav a { color: var(--text-color); text-decoration: none; font-weight: 600; font-size: 13px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
+        nav a:hover { color: var(--primary-color); background-color: var(--light-bg); }
+        nav a.active { color: var(--primary-color); background-color: #f3e8f8; }
+        .btn-crise { color: var(--alert-red) !important; }
+        .btn-logout { background-color: #ff3b30 !important; color: var(--white) !important; padding: 8px 18px !important; border-radius: 20px !important; font-weight: bold !important; }
+
+        main {
+            flex: 1; padding: 15px 6%; display: flex; flex-direction: column;
+            justify-content: space-between; height: calc(100vh - 115px); overflow: hidden;
+        }
+
+        .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; flex-shrink: 0; }
+        .metric-card { background-color: #faf5fb; padding: 12px; border-radius: 8px; border: 1px solid #e0d4e7; text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; color: var(--primary-color); }
+        .metric-label { font-size: 11px; color: #666; margin-top: 3px; }
+
+        .tab-menu { display: flex; gap: 8px; margin-top: 10px; border-bottom: 2px solid #e0d4e7; padding-bottom: 5px; flex-shrink: 0; }
+        .tab-btn { background: none; border: none; padding: 8px 14px; font-weight: bold; font-size: 12px; color: #666; cursor: pointer; border-radius: 6px; }
+        .tab-btn.active { background-color: var(--primary-color); color: var(--white); }
+
+        .tab-content-container { flex: 1; background-color: var(--white); border-radius: 8px; border: 1px solid #e8d8e3; padding: 15px; margin-top: 10px; overflow-y: auto; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        footer { background-color: #2a0b52; color: var(--secondary-color); text-align: center; padding: 10px 8%; font-size: 12px; height: 45px; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="prof-info">
+            <div class="prof-name">Flávia Nardacci</div>
+            <div class="prof-crp">Psicóloga Clínica — CRP 05/75090</div>
+        </div>
+        
+        <!-- Menu do Psicólogo com Início Ativo -->
+        <nav>
+            <a href="dashboard.html" class="active">Início</a>
+            <a href="prontuario.html">Pacientes & Prontuário</a>
+            <a href="sessoes-psicologo.html">Teleconsulta & Evolução</a>
+            <a href="encerramento-psicologo.html">Encerramento</a>
+            <a href="crise.html" class="btn-crise">Alertas de Crise</a>
+            <a href="index.html" class="btn-logout">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="metrics-grid">
+            <div class="metric-card"><div class="metric-value">48</div><div class="metric-label">Sessões Realizadas / Mês</div></div>
+            <div class="metric-card"><div class="metric-value">96%</div><div class="metric-label">NPS / Satisfação Cliente</div></div>
+            <div class="metric-card"><div class="metric-value">100%</div><div class="metric-label">Conformidade LGPD & CFP</div></div>
+            <div class="metric-card"><div class="metric-value">12</div><div class="metric-label">Empresas / Vidas B2B</div></div>
+        </div>
+
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab('relatorios')">📊 Relatórios & Indicadores</button>
+            <button class="tab-btn" onclick="switchTab('conteudo')">📚 Gestão de Conteúdo</button>
+            <button class="tab-btn" onclick="switchTab('comunidade')">👥 Eventos & Comunidade</button>
+            <button class="tab-btn" onclick="switchTab('financeiro')">💰 Financeiro & Contratos</button>
+        </div>
+
+        <div class="tab-content-container">
+            <div id="panel-relatorios" class="tab-panel active">
+                <h4>Indicadores Clínicos e Operacionais</h4>
+                <p style="font-size:12px; color:#555;">Bem-vinda ao painel de início, Dra. Flávia! Selecione os relatórios acima ou navegue pelos pacientes no menu superior.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Saúde Mental Sem Fronteiras • Governança & Gestão da Plataforma
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            document.getElementById('panel-' + tabName).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

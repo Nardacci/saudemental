@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Sem Fronteiras - Minha Área</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --rose-accent: #c48b9f;
+            --secondary-color: #e1bee7;
+            --text-color: #333;
+            --light-bg: #faf5fb;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0; color: var(--text-color);
+            background-color: var(--white); height: 100vh;
+            display: flex; flex-direction: column; overflow: hidden;
+        }
+
+        header {
+            background-color: var(--white); padding: 10px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #f0e2ec; height: 70px; flex-shrink: 0;
+        }
+
+        .user-info { text-align: left; }
+        .user-name { font-size: 16px; font-weight: bold; color: var(--primary-color); margin: 0; }
+        .user-sub { font-size: 11px; color: #777; margin: 0; }
+
+        nav { display: flex; gap: 10px; align-items: center; }
+        nav a { color: var(--text-color); text-decoration: none; font-weight: 600; font-size: 13px; padding: 8px 14px; border-radius: 20px; transition: all 0.3s; }
+        nav a:hover { color: var(--primary-color); background-color: var(--light-bg); }
+        nav a.active { color: var(--primary-color); background-color: #f3e8f8; }
+        .btn-logout { background-color: #ff3b30 !important; color: var(--white) !important; padding: 8px 16px !important; border-radius: 20px !important; font-weight: bold !important; }
+
+        main {
+            flex: 1; padding: 20px 8%; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; gap: 20px;
+        }
+
+        .welcome-card {
+            background-color: var(--light-bg); border-radius: 12px; border: 1px solid #e8d8e3;
+            padding: 25px; width: 100%; max-width: 850px; text-align: center;
+        }
+
+        .welcome-card h2 { color: var(--primary-color); margin: 0 0 10px 0; }
+        .welcome-card p { color: #555; font-size: 14px; margin-bottom: 20px; }
+
+        .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; max-width: 850px; }
+        
+        .action-card {
+            background-color: var(--white); border-radius: 10px; border: 1px solid #e0d4e7;
+            padding: 18px; text-align: center; text-decoration: none; color: inherit;
+            transition: all 0.2s; display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .action-card:hover { transform: translateY(-3px); border-color: var(--rose-accent); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .action-card h4 { color: var(--primary-color); margin: 0 0 8px 0; font-size: 15px; }
+        .action-card p { font-size: 12px; color: #666; margin: 0; }
+
+        footer { background-color: #2a0b52; color: var(--secondary-color); text-align: center; padding: 10px 8%; font-size: 12px; height: 45px; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="user-info">
+            <div class="user-name">Área do Paciente</div>
+            <div class="user-sub">Bem-vindo(a) ao Saúde Mental Sem Fronteiras</div>
+        </div>
+        <nav>
+            <a href="minha-area.html" class="active">Início</a>
+            <a href="anamnese.html">Anamnese</a>
+            <a href="agendamento.html">Pacote & Agenda</a>
+            <a href="pagamento.html">Pagamentos</a>
+            <a href="sessoes.html">Teleconsulta & Tarefas</a>
+            <a href="encerramento.html">Plano de Continuidade</a>
+            <a href="index.html" class="btn-logout">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-card">
+            <h2>Próxima Sessão Agendada</h2>
+            <p>Terça-feira, 18 de Agosto de 2026 às <strong>09:00 AM (ET / Horário EUA)</strong> com a <strong>Dra. Flávia Nardacci</strong></p>
+            <a href="sessoes.html" style="background-color: var(--primary-color); color: white; padding: 10px 24px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 13px;">Entrar na Sala de Teleconsulta</a>
+        </div>
+
+        <div class="cards-grid">
+            <a href="anamnese.html" class="action-card">
+                <h4>📝 Anamnese Inicial</h4>
+                <p>Preencha ou atualize suas informações clínicas iniciais.</p>
+            </a>
+            <a href="agendamento.html" class="action-card">
+                <h4>📅 Pacote de 4 Sessões</h4>
+                <p>Gerencie seus horários ou contrate um novo ciclo de sessões.</p>
+            </a>
+            <a href="pagamento.html" class="action-card">
+                <h4>💳 Pagamentos & Faturas</h4>
+                <p>Consulte comprovantes e recibos para o Imposto de Renda/Carnê-Leão.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        Saúde Mental Sem Fronteiras • Plataforma Segura para Imigrantes nos EUA
+    </footer>
+
+</body>
+</html>

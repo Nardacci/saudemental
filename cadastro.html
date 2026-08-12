@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental - Agendar / Cadastrar</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #e1bee7;
+            --accent-color: #7b1fa2;
+            --text-color: #333;
+            --light-bg: #f3e5f5;
+            --white: #ffffff;
+            --alert-color: #c62828;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--white);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Elimina barra de rolagem */
+        }
+
+        /* Header Padronizado */
+        header {
+            background-color: var(--white);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-bg);
+            height: 70px;
+            flex-shrink: 0;
+        }
+
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+
+        nav { display: flex; gap: 15px; align-items: center; }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--primary-color); background-color: var(--light-bg); }
+        .btn-nav { background-color: var(--primary-color) !important; color: var(--white) !important; }
+
+        /* Conteúdo Full Screen */
+        main {
+            flex: 1;
+            padding: 15px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 { color: var(--primary-color); font-size: 28px; margin: 0 0 4px 0; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 20px; font-size: 14px; }
+
+        .form-container {
+            background-color: #faf5fb;
+            padding: 25px 30px;
+            border-radius: 12px;
+            border: 1px solid #e0d4e7;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-group { margin-bottom: 12px; }
+        label { display: block; margin-bottom: 4px; font-weight: bold; color: var(--primary-color); font-size: 13px; }
+
+        input, select {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: var(--white);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 4px rgba(74, 20, 140, 0.2);
+        }
+
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover { background-color: var(--accent-color); }
+
+        /* Modal de Emergência */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            border-top: 6px solid var(--alert-color);
+        }
+
+        .modal-content h3 { color: var(--alert-color); margin-top: 0; }
+        .btn-emergency { display: block; color: var(--white); padding: 12px; font-weight: bold; text-decoration: none; border-radius: 6px; margin-top: 10px; }
+        .btn-911 { background-color: var(--alert-color); }
+        .btn-988 { background-color: #1565c0; }
+        .close-modal { margin-top: 15px; background: none; border: none; color: #777; cursor: pointer; text-decoration: underline; }
+
+        /* Footer Padronizado */
+        footer {
+            background-color: #2a0b52;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 12px 8%;
+            font-size: 13px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Saúde Mantal</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">O Que Fazemos</a>
+            <a href="dores.html">Acolhimento</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="cadastro.html" class="btn-nav active">Agendar / Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Pré-Cadastro e Triagem</h2>
+        <p class="subtitle">Preencha os dados abaixo para direcionamento ao atendimento.</p>
+
+        <div class="form-container">
+            <form id="triagemForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Como prefere ser chamado">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="exemplo@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp (com DDI)</label>
+                    <input type="tel" id="whatsapp" required placeholder="+1 (EUA) ou +55 (Brasil)">
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado de Residência (EUA)</label>
+                    <input type="text" id="estado" required placeholder="Ex: Florida, Massachusetts">
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">Sua necessidade principal hoje:</label>
+                    <select id="motivo" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="terapia">Busco psicoterapia individual contínua</option>
+                        <option value="adaptacao">Dificuldades de adaptação cultural / Saudade</option>
+                        <option value="ansiedade">Ansiedade ou Estresse</option>
+                        <option value="crise">Estou em momento de crise aguda / Risco à vida</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar e Continuar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal para Fluxo de Crise -->
+    <div id="modalEmergencia" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Sua segurança é nossa prioridade</h3>
+            <p style="font-size:14px; color:#555;">Nosso serviço é focado em suporte psicoterapêutico contínuo e <strong>não atende emergências psiquiátricas imediatas</strong>.</p>
+            <p style="font-size:14px; color:#555;">Utilize os serviços de emergência nos EUA agora:</p>
+
+            <a href="tel:911" class="btn-emergency btn-911">Discar 911 (Emergência Geral)</a>
+            <a href="tel:988" class="btn-emergency btn-988">Discar/Texto 988 (Crisis Lifeline)</a>
+
+            <button class="close-modal" onclick="fecharModal()">Voltar</button>
+        </div>
+    </div>
+
+    <footer>
+         Projeto Saúde Mental | Tecnologia • Processos • Pessoas
+    </footer>
+
+    <script>
+        document.getElementById('triagemForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var motivo = document.getElementById('motivo').value;
+
+            if (motivo === 'crise') {
+                document.getElementById('modalEmergencia').style.display = 'flex';
+            } else {
+                alert('Cadastro e Triagem realizados com sucesso! A automação n8n enviaria os dados e abriria a agenda do Cal.com.');
+            }
+        });
+
+        function fecharModal() {
+            document.getElementById('modalEmergencia').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

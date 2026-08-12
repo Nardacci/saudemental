@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Sem Fronteiras - Início</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #e1bee7;
+            --accent-color: #7b1fa2;
+            --text-color: #333;
+            --light-bg: #f3e5f5;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            color: var(--text-color);
+            background-color: var(--white);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Zero rolagem global */
+        }
+
+        /* Header Padronizado */
+        header {
+            background-color: var(--white);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-bg);
+            height: 70px;
+            flex-shrink: 0;
+        }
+
+        .logo { 
+            font-size: 22px; 
+            font-weight: 800; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+        }
+
+        nav { display: flex; gap: 12px; align-items: center; }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover, nav a.active { color: var(--primary-color); background-color: var(--light-bg); }
+        .btn-nav { background-color: var(--primary-color) !important; color: var(--white) !important; }
+        .btn-login { border: 2px solid var(--primary-color); color: var(--primary-color); cursor: pointer; }
+
+        /* Conteúdo Principal Full Screen */
+        main {
+            flex: 1;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        h1 { color: var(--primary-color); font-size: 42px; margin-bottom: 20px; max-width: 850px; line-height: 1.2; }
+        p { font-size: 18px; color: #555; max-width: 750px; margin-bottom: 35px; }
+
+        .btn-cta {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 16px 36px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(74, 20, 140, 0.25);
+            transition: all 0.3s;
+        }
+
+        .btn-cta:hover { background-color: var(--accent-color); transform: translateY(-2px); }
+
+        /* Modal de Login Inteligente */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-card {
+            background-color: var(--white);
+            padding: 25px 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .modal-card h3 { color: var(--primary-color); margin: 0 0 5px 0; text-align: center; }
+        .modal-card p { font-size: 13px; color: #666; margin-bottom: 15px; text-align: center; }
+
+        .credentials-box {
+            background-color: var(--light-bg);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .form-group { margin-bottom: 12px; text-align: left; }
+        label { display: block; font-size: 12px; font-weight: bold; color: var(--primary-color); margin-bottom: 4px; }
+        input { width: 100%; padding: 9px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; }
+
+        .btn-submit-login {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 11px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .close-modal { margin-top: 10px; background: none; border: none; color: #777; cursor: pointer; text-decoration: underline; width: 100%; }
+
+        footer {
+            background-color: #2a0b52;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 12px 8%;
+            font-size: 13px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Saúde Mental Sem Fronteiras</a>
+        <nav>
+            <a href="index.html" class="active">Início</a>
+            <a href="sobre.html">O Que Fazemos</a>
+            <a href="empresas.html">Para Empresas</a>
+            <a href="dores.html">Acolhimento</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="cadastro.html" class="btn-nav">Agendar</a>
+            <a href="#" class="btn-login" onclick="abrirLogin()">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Saúde Mental Sem Fronteiras para Imigrantes nos EUA</h1>
+        <p>Apoiamos a comunidade brasileira nos Estados Unidos através de palestras, acolhimento comunitário e atendimento psicológico online com profissionais habilitados no Brasil.</p>
+        <a href="cadastro.html" class="btn-cta">Iniciar Atendimento / Agendar</a>
+    </main>
+
+    <!-- Modal de Login para Apresentação -->
+    <div id="modalLogin" class="modal-overlay">
+        <div class="modal-card">
+            <h3>Acessar Plataforma</h3>
+            <p>Acesso exclusivo de demonstração navegável</p>
+
+            <div class="credentials-box">
+                <strong>Logins de Teste:</strong><br>
+                • <b>Cliente:</b> cliente@labmedsys.com | 123<br>
+                • <b>Flávia (Psicóloga):</b> flavia@labmedsys.com | 123
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="emailLogin">E-mail</label>
+                    <input type="email" id="emailLogin" required placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" required placeholder="Digite sua senha">
+                </div>
+
+                <button type="submit" class="btn-submit-login">Entrar no Sistema</button>
+            </form>
+            <button class="close-modal" onclick="fecharLogin()">Cancelar</button>
+        </div>
+    </div>
+
+    <footer>
+        Saúde Mental Sem Fronteiras | Tecnologia • Processos • Pessoas
+    </footer>
+
+    <script>
+        function abrirLogin() { document.getElementById('modalLogin').style.display = 'flex'; }
+        function fecharLogin() { document.getElementById('modalLogin').style.display = 'none'; }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('emailLogin').value.trim().toLowerCase();
+            var senha = document.getElementById('senhaLogin').value;
+
+            if (email === 'flavia@labmedsys.com' && senha === '123') {
+                window.location.href = 'dashboard.html'; // Redireciona diretamente para o Dashboard da Psicóloga
+            } else if (email === 'cliente@labmedsys.com' && senha === '123') {
+                window.location.href = 'minha-area.html'; // Redireciona para a Área do Paciente
+            } else {
+                alert('Credenciais inválidas. Use os logins de teste informados no quadro.');
+            }
+        });
+    </script>
+
+</body>
+</html>

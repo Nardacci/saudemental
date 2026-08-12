@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Sem Fronteiras - Pacientes & Prontuário</title>
+    <style>
+        :root {
+            --primary-color: #4a148c;
+            --rose-accent: #c48b9f;
+            --secondary-color: #e1bee7;
+            --text-color: #333;
+            --light-bg: #faf5fb;
+            --white: #ffffff;
+            --alert-red: #d32f2f;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0; color: var(--text-color);
+            background-color: var(--white); height: 100vh;
+            display: flex; flex-direction: column; overflow: hidden; /* Zero rolagem global */
+        }
+
+        header {
+            background-color: var(--white); padding: 10px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #f0e2ec; height: 70px; flex-shrink: 0;
+        }
+
+        .prof-info { text-align: left; }
+        .prof-name { font-size: 16px; font-weight: bold; color: var(--rose-accent); margin: 0; }
+        .prof-crp { font-size: 11px; color: #777; margin: 0; }
+
+        nav { display: flex; gap: 12px; align-items: center; }
+        nav a { color: var(--text-color); text-decoration: none; font-weight: 600; font-size: 13px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
+        nav a:hover { color: var(--primary-color); background-color: var(--light-bg); }
+        nav a.active { color: var(--primary-color); background-color: #f3e8f8; }
+        .btn-crise { color: var(--alert-red) !important; }
+        .btn-logout { background-color: #ff3b30 !important; color: var(--white) !important; padding: 8px 18px !important; border-radius: 20px !important; font-weight: bold !important; }
+
+        main {
+            flex: 1; padding: 15px 5%; display: flex; gap: 20px;
+            height: calc(100vh - 115px); overflow: hidden;
+        }
+
+        /* Sidebar de Seleção de Pacientes */
+        .patient-sidebar {
+            width: 260px; background-color: var(--light-bg); border-radius: 10px;
+            border: 1px solid #e8d8e3; padding: 15px; display: flex; flex-direction: column;
+        }
+
+        .patient-sidebar h4 { margin: 0 0 10px 0; color: var(--primary-color); font-size: 14px; border-bottom: 2px solid var(--rose-accent); padding-bottom: 5px; }
+
+        .search-box { width: 100%; padding: 7px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px; margin-bottom: 10px; }
+
+        .patient-card {
+            padding: 10px; background-color: var(--white); border-radius: 6px;
+            margin-bottom: 8px; border: 1px solid #ddd; cursor: pointer; font-size: 12px; transition: all 0.2s;
+        }
+
+        .patient-card:hover, .patient-card.active { border-color: var(--rose-accent); background-color: #fdf6f8; font-weight: bold; }
+
+        /* Container Principal do Prontuário */
+        .prontuario-container {
+            flex: 1; background-color: var(--white); border-radius: 10px;
+            border: 1px solid #e8d8e3; padding: 20px; display: flex; flex-direction: column;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02); overflow: hidden;
+        }
+
+        /* Abas Internas de Navegação (Anamnese vs Prontuário) */
+        .internal-tabs {
+            display: flex; gap: 10px; border-bottom: 2px solid #e8d8e3; padding-bottom: 8px; margin-bottom: 15px; flex-shrink: 0;
+        }
+
+        .tab-btn {
+            background: #faf5fb; border: 1px solid #e0d4e7; padding: 8px 16px; font-weight: bold;
+            font-size: 12px; color: #666; cursor: pointer; border-radius: 6px; transition: all 0.2s;
+        }
+
+        .tab-btn.active { background-color: var(--rose-accent); color: var(--white); border-color: var(--rose-accent); }
+
+        .tab-content {
+            flex: 1; overflow-y: auto; padding-right: 5px; display: none;
+        }
+
+        .tab-content.active { display: block; }
+
+        .section-header {
+            background-color: #fdf6f8; color: var(--rose-accent); padding: 8px 12px;
+            font-weight: bold; font-size: 12px; border-left: 4px solid var(--rose-accent);
+            margin: 15px 0 10px 0; text-transform: uppercase;
+        }
+
+        .form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .form-group { margin-bottom: 10px; }
+        .form-group.full { grid-column: span 3; }
+
+        label { display: block; font-size: 11px; font-weight: bold; color: #555; margin-bottom: 3px; }
+        input, select, textarea { width: 100%; padding: 7px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px; font-family: inherit; }
+        textarea { resize: vertical; height: 45px; }
+
+        .btn-salvar-prontuario {
+            background-color: var(--rose-accent); color: var(--white); border: none;
+            padding: 10px 22px; font-size: 13px; font-weight: bold; border-radius: 6px;
+            cursor: pointer; margin-top: 10px; float: right;
+        }
+
+        footer {
+            background-color: #2a0b52; color: var(--secondary-color); text-align: center;
+            padding: 10px 8%; font-size: 12px; height: 45px; flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="prof-info">
+            <div class="prof-name">Flávia Nardacci</div>
+            <div class="prof-crp">Psicóloga Clínica — CRP 05/75090</div>
+        </div>
+        
+        <!-- Menu do Psicólogo -->
+        <nav>
+            <a href="dashboard.html">Início</a>
+            <a href="prontuario.html" class="active">Pacientes & Prontuário</a>
+            <a href="sessoes-psicologo.html">Teleconsulta & Evolução</a>
+            <a href="encerramento-psicologo.html">Encerramento</a>
+            <a href="crise.html" class="btn-crise">Alertas de Crise</a>
+            <a href="index.html" class="btn-logout">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sidebar para Seleção de Pacientes -->
+        <div class="patient-sidebar">
+            <h4>Meus Pacientes</h4>
+            <input type="text" class="search-box" placeholder="🔍 Buscar paciente...">
+            
+            <div class="patient-card active" onclick="carregarPaciente('João Silva', '34 anos', 'Orlando, FL')">
+                <div><strong>João Silva</strong></div>
+                <small style="color:#777;">Orlando, FL • Pacote Ativo</small>
+            </div>
+
+            <div class="patient-card" onclick="carregarPaciente('Maria Santos', '29 anos', 'Boston, MA')">
+                <div><strong>Maria Santos</strong></div>
+                <small style="color:#777;">Boston, MA • Pacote Ativo</small>
+            </div>
+        </div>
+
+        <!-- Área Principal de Atendimento do Paciente Selecionado -->
+        <div class="prontuario-container">
+            <h3 style="margin: 0 0 12px 0; color: var(--primary-color);">Paciente: <span id="nomePacienteHeader">João Silva</span></h3>
+
+            <!-- Abas Internas da Ficha do Paciente -->
+            <div class="internal-tabs">
+                <button class="tab-btn active" onclick="switchInternalTab('anamnese')">📋 Ficha de Anamnese</button>
+                <button class="tab-btn" onclick="switchInternalTab('prontuario')">📝 Prontuário & Evoluções</button>
+                <button class="tab-btn" onclick="switchInternalTab('documentos')">📁 Documentos & Termos (TCLE)</button>
+            </div>
+
+            <!-- Conteúdo da Aba 1: Anamnese Oficial (Ficha do Documento) -->
+            <div id="tab-anamnese" class="tab-content active">
+                <form id="anamneseForm">
+                    <div class="section-header">1. DADOS DE IDENTIFICAÇÃO</div>
+                    <div class="form-grid">
+                        <div class="form-group"><label>Nome Completo</label><input type="text" id="campoNome" value="João Silva"></div>
+                        <div class="form-group"><label>Filiação</label><input type="text" value="Carlos Silva e Maria Silva"></div>
+                        <div class="form-group"><label>Idade / Gênero</label><input type="text" id="campoIdade" value="34 anos / Masculino"></div>
+                        <div class="form-group"><label>Naturalidade / Estado Civil</label><input type="text" value="Rio de Janeiro, RJ / Casado"></div>
+                        <div class="form-group"><label>Profissão / Religião</label><input type="text" value="Engenheiro / Católica"></div>
+                        <div class="form-group"><label>Residência / Telefone EUA</label><input type="text" id="campoResidencia" value="Orlando, FL / +1 (407) 555-0199"></div>
+                        <div class="form-group full"><label>Contato de emergência nos EUA</label><input type="text" value="Ana Silva (Esposa) - +1 (407) 555-0200"></div>
+                    </div>
+
+                    <div class="section-header">2. QUEIXA PRINCIPAL & SINTOMAS[cite: 3]</div>
+                    <div class="form-group full"><label>O que te fez buscar a psicoterapia?</label><textarea>Relata quadro de ansiedade constante decorrente da transição profissional nos EUA.</textarea></div>
+                    <div class="form-group full"><label>O que você espera alcançar com a terapia?</label><textarea>Desenvolver estratégias para lidar com a pressão no trabalho e a saudade do Brasil.</textarea></div>
+
+                    <div class="section-header">3. SITUAÇÃO DE VIDA ATUAL & DESENVOLVIMENTO[cite: 3]</div>
+                    <div class="form-group full"><label>Rotina, Família, Amigos e Lazer nos EUA</label><textarea>Boa relação conjugal. Rede de apoio reduzida em Orlando.</textarea></div>
+
+                    <button type="submit" class="btn-salvar-prontuario">Salvar Alterações na Anamnese</button>
+                </form>
+            </div>
+
+            <!-- Conteúdo da Aba 2: Prontuário & Evoluções Clínicas -->
+            <div id="tab-prontuario" class="tab-content">
+                <div class="section-header">Histórico de Atendimentos do Ciclo[cite: 3]</div>
+                
+                <div style="background-color: #faf5fb; border-left: 4px solid var(--primary-color); padding: 10px; border-radius: 6px; margin-bottom: 12px;">
+                    <strong style="color: var(--primary-color); font-size: 12px;">Sessão 2 de 4 — 18/08/2026 (09:00 AM ET)</strong>
+                    <p style="font-size: 12px; margin: 4px 0 0 0; color: #444;">Paciente relata melhora na qualidade do sono após aplicação das técnicas de respiração. Mantida a escuta ativa para questões de adaptação cultural.</p>
+                </div>
+
+                <div style="background-color: #faf5fb; border-left: 4px solid var(--rose-accent); padding: 10px; border-radius: 6px; margin-bottom: 12px;">
+                    <strong style="color: var(--primary-color); font-size: 12px;">Sessão 1 de 4 — 11/08/2026 (09:00 AM ET)</strong>
+                    <p style="font-size: 12px; margin: 4px 0 0 0; color: #444;">Acolhimento inicial, revisão da anamnese e pactuação do contrato terapêutico quinzenal.</p>
+                </div>
+
+                <div class="section-header">Nova Evolução Clínica (Sessão Atual)[cite: 3]</div>
+                <textarea placeholder="Digite as anotações do atendimento atual..." style="height: 80px;"></textarea>
+                <button type="button" class="btn-salvar-prontuario" onclick="alert('Evolução adicionada ao histórico do prontuário!')">Registrar Nova Evolução</button>
+            </div>
+
+            <!-- Conteúdo da Aba 3: Documentos & Termos -->
+            <div id="tab-documentos" class="tab-content">
+                <div class="section-header">Documentos do Paciente</div>
+                <ul style="font-size: 12px; color: #555; line-height: 1.8;">
+                    <li>📄 <strong>TCLE_Assinado_Joao_Silva.pdf</strong> — Termo de Consentimento Livre e Esclarecido (Assinado em 10/08/2026)</li>
+                    <li>📄 <strong>Contrato_Pacote_4_Sessões.pdf</strong> — Contrato de Serviços Terapêuticos (Status: Ativo)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Saúde Mental Sem Fronteiras • Responsabilidade Técnica da Dra. Flávia Nardacci (CRP 05/75090)[cite: 3]
+    </footer>
+
+    <script>
+        // Função para alternar abas internas da ficha do paciente
+        function switchInternalTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+        }
+
+        // Função para selecionar o paciente na barra lateral
+        function carregarPaciente(nome, idade, residencia) {
+            document.querySelectorAll('.patient-card').forEach(card => card.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            document.getElementById('nomePacienteHeader').innerText = nome;
+            document.getElementById('campoNome').value = nome;
+            document.getElementById('campoIdade').value = idade;
+            document.getElementById('campoResidencia').value = residencia;
+        }
+
+        document.getElementById('anamneseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Anamnese atualizada com sucesso no banco de dados!');
+        });
+    </script>
+
+</body>
+</html>
