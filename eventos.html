@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Mental - Eventos</title>
+    <title>Saúde Mental Sem Fronteiras - Eventos & Comunidade</title>
     <style>
         :root {
             --primary-color: #4a148c;
             --secondary-color: #e1bee7;
+            --accent-color: #7b1fa2;
+            --rose-accent: #c48b9f;
             --text-color: #333;
             --light-bg: #f3e5f5;
             --white: #ffffff;
@@ -17,16 +19,16 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             color: var(--text-color);
             background-color: var(--white);
             height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: hidden; /* Zero rolagem global */
         }
 
+        /* Header Padronizado */
         header {
             background-color: var(--white);
             padding: 15px 8%;
@@ -38,9 +40,9 @@
             flex-shrink: 0;
         }
 
-        .logo { font-size: 24px; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+        .logo { font-size: 22px; font-weight: 800; color: var(--primary-color); text-decoration: none; }
 
-        nav { display: flex; gap: 15px; align-items: center; }
+        nav { display: flex; gap: 12px; align-items: center; }
 
         nav a {
             color: var(--text-color);
@@ -54,7 +56,9 @@
 
         nav a:hover, nav a.active { color: var(--primary-color); background-color: var(--light-bg); }
         .btn-nav { background-color: var(--primary-color) !important; color: var(--white) !important; }
+        .btn-login { border: 2px solid var(--primary-color); color: var(--primary-color); cursor: pointer; }
 
+        /* Conteúdo Principal Full Screen */
         main {
             flex: 1;
             padding: 20px 8%;
@@ -63,46 +67,64 @@
             justify-content: center;
         }
 
-        h2 { color: var(--primary-color); font-size: 30px; margin: 0 0 5px 0; text-align: center; }
+        h2 { color: var(--primary-color); font-size: 28px; margin: 0 0 5px 0; text-align: center; }
         .subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 15px; }
 
-        .events-list {
+        .events-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
         }
 
         .event-card {
-            background-color: var(--white);
+            background-color: #faf5fb;
+            padding: 20px;
             border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid #e0d4e7;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
-        .event-header {
+        .event-card h3 { 
+            color: var(--primary-color); 
+            margin: 0 0 10px 0; 
+            font-size: 16px; 
+            border-bottom: 2px solid var(--secondary-color); 
+            padding-bottom: 6px; 
+        }
+
+        .event-card p { color: #555; font-size: 12px; margin: 0 0 12px 0; line-height: 1.5; }
+        
+        .event-meta {
+            font-size: 11px;
+            color: var(--primary-color);
+            font-weight: bold;
+            background-color: var(--secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .btn-event {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 12px 18px;
+            border: none;
+            padding: 10px;
+            font-size: 12px;
             font-weight: bold;
-            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .event-body { padding: 18px; }
-        .event-body h4 { margin: 0 0 8px 0; color: var(--primary-color); font-size: 16px; }
-        .event-body p { color: #555; font-size: 13px; margin-bottom: 12px; line-height: 1.4; }
-
-        .event-tag {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: bold;
-        }
+        .btn-event:hover { background-color: var(--accent-color); }
 
         footer {
             background-color: #2a0b52;
@@ -118,52 +140,55 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">Saúde Mental</a>
+        <a href="index.html" class="logo">Saúde Mental Sem Fronteiras</a>
+        <!-- Menu Público Padronizado -->
         <nav>
             <a href="index.html">Início</a>
             <a href="sobre.html">O Que Fazemos</a>
+            <a href="empresas.html">Para Empresas</a>
             <a href="dores.html">Acolhimento</a>
             <a href="eventos.html" class="active">Eventos</a>
-            <a href="cadastro.html" class="btn-nav">Agendar / Cadastrar</a>
+            <a href="cadastro.html" class="btn-nav">Agendar</a>
+            <a href="index.html" class="btn-login">Entrar</a>
         </nav>
     </header>
 
     <main>
-        <h2>Eventos & Ações Comunitárias</h2>
-        <p class="subtitle">Levamos informação preventiva e acolhimento direto de onde a comunidade está.</p>
+        <h2>Eventos, Workshops e Comunidade</h2>
+        <p class="subtitle">Ações de conscientização e acolhimento em saúde mental para brasileiros nos EUA.</p>
 
-        <div class="events-list">
+        <div class="events-grid">
             <div class="event-card">
-                <div class="event-header">Palestras em Comunidades</div>
-                <div class="event-body">
-                    <h4>Saúde Mental do Imigrante</h4>
-                    <p>Encontros presenciais e remotos em igrejas, associações e parceiros locais para desmistificar o cuidado emocional.</p>
-                    <span class="event-tag">Presencial & Online</span>
+                <div>
+                    <h3>Workshop: Adaptação Cultural nos EUA</h3>
+                    <div class="event-meta">🗓️ Online • Zoom | Gravação Disponível</div>
+                    <p>Estratégias para lidar com a ansiedade da imigração, distância familiar e choque cultural na rotina de trabalho.</p>
                 </div>
+                <a href="cadastro.html" class="btn-event">Inscrever-se Gratuitamente</a>
             </div>
 
             <div class="event-card">
-                <div class="event-header">Rodas de Conversa</div>
-                <div class="event-body">
-                    <h4>Espaços Seguros de Escuta</h4>
-                    <p>Grupos temáticos para troca de experiências sobre adaptação, maternidade no exterior e transição de carreira.</p>
-                    <span class="event-tag">Grupos de Apoio</span>
+                <div>
+                    <h3>Palestra B2B: Saúde Emocional no Trabalho</h3>
+                    <div class="event-meta">🏢 Para Empresas & RHs</div>
+                    <p>Prevenção de burnout e riscos psicossociais alinhados às diretrizes de saúde ocupacional nos Estados Unidos.</p>
                 </div>
+                <a href="empresas.html" class="btn-event">Solicitar para sua Empresa</a>
             </div>
 
             <div class="event-card">
-                <div class="event-header">Triagem & Orientação</div>
-                <div class="event-body">
-                    <h4>Avaliação de Elegibilidade</h4>
-                    <p>Recepção ética para direcionamento ao psicólogo adequado ou encaminhamento à rede local em emergências.</p>
-                    <span class="event-tag">Atendimento Individual</span>
+                <div>
+                    <h3>Roda de Acolhimento Comunitário</h3>
+                    <div class="event-meta">🤝 Grupo de Apoio Online</div>
+                    <p>Espaço seguro e sigiloso mediado por psicólogos para troca de experiências entre imigrantes brasileiros.</p>
                 </div>
+                <a href="cadastro.html" class="btn-event">Participar do Grupo</a>
             </div>
         </div>
     </main>
 
     <footer>
-        Projeto Saúde Mental | Tecnologia • Processos • Pessoas
+        Saúde Mental Sem Fronteiras | Tecnologia • Processos • Pessoas
     </footer>
 
 </body>
