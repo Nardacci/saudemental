@@ -8,23 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#262333;--muted:#777282;--surface:#fff;--soft:#fbf9fd;--line:#ebe8f0;--accent:#9b83b5;--accent-2:#b59bcf;--accent-soft:#f5eff9;--shadow:0 20px 55px rgba(45,35,60,.09)}
+    :root{--ink:#262333;--muted:#777282;--surface:#fff;--accent:#9b83b5;--accent-2:#b59bcf;--accent-soft:#f5eff9;--line:#ebe8f0;--shadow:0 20px 55px rgba(45,35,60,.09)}
     *{box-sizing:border-box}
     html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
     body{background:linear-gradient(135deg,#fcfbfd,#f7f3f9)}
-    header{height:70px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:relative;z-index:2}
+    header{height:70px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 6%}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
     .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px;box-shadow:0 8px 20px rgba(155,131,181,.18)}
     .brand-name{font-weight:800;letter-spacing:-.03em}.brand-name span{font-weight:500;color:var(--muted)}
-    nav{display:flex;align-items:center;gap:8px}nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;padding:9px 13px;border-radius:10px}nav a:hover,nav a.active{background:var(--accent-soft);color:var(--accent)}nav .primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;padding:10px 16px;box-shadow:0 7px 18px rgba(155,131,181,.16)}
-    main{min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center;padding:14px 6% 34px}
-    .shell{width:100%;max-width:1180px;background:var(--surface);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.08fr .92fr}
-    .hero{background:linear-gradient(145deg,#40364c,#5b4c68);color:#fff;padding:42px 56px;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;opacity:.72;margin:0 0 11px}.hero h1{font-size:43px;line-height:1.04;letter-spacing:-.05em;margin:0 0 16px}.hero p{font-size:16px;line-height:1.5;color:rgba(255,255,255,.8);max-width:600px;margin:0 0 23px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:11px;padding:11px 18px;font-size:13px;font-weight:700}.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 9px 20px rgba(155,131,181,.2)}.btn-secondary{border:1px solid rgba(255,255,255,.24);color:#fff;background:rgba(255,255,255,.07)}
-    .side{padding:30px 42px;display:flex;flex-direction:column;justify-content:center}.side h2{font-size:27px;line-height:1.12;letter-spacing:-.04em;margin:0 0 7px}.side>p{color:var(--muted);font-size:13px;line-height:1.45;margin:0 0 15px}.points{display:grid;gap:8px}.point{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:13px;background:#fefcff}.point-icon{width:31px;height:31px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:12px;flex:none}.point strong{display:block;font-size:12.5px;margin-bottom:2px}.point span{display:block;color:var(--muted);font-size:11.5px;line-height:1.35}
+    main{min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center;padding:24px 6% 44px}
+    .shell{width:100%;max-width:1180px;background:var(--surface);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.08fr .92fr}
+    .hero{background:linear-gradient(145deg,#40364c,#5b4c68);color:#fff;padding:52px 58px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;opacity:.72;margin:0 0 13px}
+    .hero h1{font-size:46px;line-height:1.05;letter-spacing:-.05em;margin:0 0 18px}
+    .hero p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.82);max-width:600px;margin:0 0 28px}
+    .continue{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-size:14px;font-weight:700;width:max-content;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.45)}
+    .continue:hover{border-bottom-color:#fff}
+    .side{padding:46px 48px;display:flex;flex-direction:column;justify-content:center}
+    .side h2{font-size:29px;line-height:1.12;letter-spacing:-.04em;margin:0 0 9px}.side>p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
+    .points{display:grid;gap:10px;margin-top:22px}.point{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:13px;background:#fefcff}.point-icon{width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;flex:none}.point strong{display:block;font-size:13px;margin-bottom:3px}.point span{display:block;color:var(--muted);font-size:12px;line-height:1.45}
     footer{text-align:center;color:#918b99;font-size:10px;padding:0 0 10px}
-    @media(max-width:850px){header{padding:0 20px}nav a:not(.primary){display:none}main{min-height:calc(100vh - 70px);padding:20px 16px 32px}.shell{grid-template-columns:1fr}.hero{padding:42px 30px}.side{padding:34px 30px}.hero h1{font-size:38px}footer{padding:0 0 20px}.brand-name span{display:none}}
+    @media(max-width:850px){header{padding:0 20px}main{min-height:calc(100vh - 70px);padding:20px 16px 32px}.shell{grid-template-columns:1fr}.hero{padding:42px 30px}.side{padding:36px 30px}.hero h1{font-size:38px}.brand-name span{display:none}}
   </style>
 </head>
 <body>
@@ -32,11 +36,6 @@
     <a href="index.html" class="brand" aria-label="KORbuild Saúde Mental">
       <span class="brand-mark">K</span><span class="brand-name">KOR<span>build</span> · Saúde Mental</span>
     </a>
-    <nav>
-      <a href="index.html" class="active">Início</a>
-      <a href="acolhimento.html">Acolhimento</a>
-      <a href="agendamento.html" class="primary">Agendamento</a>
-    </nav>
   </header>
 
   <main>
@@ -45,10 +44,7 @@
         <p class="eyebrow">KORBUILD · SAÚDE MENTAL</p>
         <h1>Saúde mental sem fronteiras.</h1>
         <p>Acolhimento e atendimento psicológico para brasileiros que vivem longe de casa, com espaço para falar, compreender e ressignificar suas dores e desafios emocionais da vida no exterior.</p>
-        <div class="actions">
-          <a href="acolhimento.html" class="btn btn-primary">Quero conversar →</a>
-          <a href="agendamento.html" class="btn btn-secondary">Conhecer o atendimento</a>
-        </div>
+        <a href="acolhimento.html" class="continue">Continuar <span>→</span></a>
       </div>
       <div class="side">
         <p class="eyebrow" style="color:var(--accent);opacity:1">UM ESPAÇO PARA VOCÊ</p>
