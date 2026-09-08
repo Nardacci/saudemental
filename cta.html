@@ -18,7 +18,6 @@
     main{min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center;padding:38px 6% 46px}
     .shell{width:100%;max-width:1120px;background:var(--surface);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;min-height:620px}
     .message{padding:70px 68px;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.18em;color:var(--accent);margin:0 0 17px}
     h1{font-size:50px;line-height:1.03;letter-spacing:-.055em;margin:0 0 20px;max-width:620px}
     .sub{font-size:21px;line-height:1.45;color:#5f5870;margin:0 0 22px;max-width:570px}
     .copy{font-size:15px;line-height:1.7;color:var(--muted);margin:0 0 34px;max-width:590px}
@@ -29,7 +28,8 @@
     .card{width:100%;max-width:390px;background:rgba(255,255,255,.98);border-radius:24px;padding:38px 30px 30px;text-align:center;box-shadow:0 18px 45px rgba(20,15,28,.18)}
     .icon{width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font-size:25px}
     .card h2{font-size:25px;letter-spacing:-.035em;margin:0 0 8px}.card p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 24px}
-    .primary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 18px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;text-decoration:none;font-size:14px;font-weight:700;box-shadow:0 10px 25px rgba(123,98,151,.24)}
+    .primary{display:flex;align-items:center;justify-content:center;width:100%;padding:16px 18px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;text-decoration:none;box-shadow:0 10px 25px rgba(123,98,151,.24)}
+    .whatsapp-icon{width:27px;height:27px;display:block}
     .privacy{display:flex;gap:8px;justify-content:center;align-items:flex-start;margin:22px 0 0;color:#8a8492;font-size:10.5px;line-height:1.45}.privacy b{font-size:13px;color:var(--accent)}
     footer{text-align:center;color:#918b99;font-size:10px;padding:0 0 12px}
     @media(max-width:850px){header{padding:0 20px}.brand-name span{display:none}main{padding:20px 16px 30px}.shell{grid-template-columns:1fr;min-height:auto}.message{padding:46px 30px}.action{padding:30px}.reassurance{grid-template-columns:1fr;gap:18px;margin-bottom:30px}h1{font-size:40px}.sub{font-size:19px}.card{max-width:430px}}
@@ -40,9 +40,8 @@
   <main>
     <section class="shell">
       <div class="message">
-        <p class="eyebrow">04 · O PRÓXIMO PASSO</p>
         <h1>Você não precisa fazer isso sozinho(a).</h1>
-        <p class="sub">Agora que você chegou até aqui, talvez seja hora de conversar.</p>
+        <p class="sub">Agora que você chegou até aqui, esse é o momento de iniciar o processo para cuidar dos seus sentimentos e emoções.</p>
         <p class="copy">Cuidar da sua saúde mental também faz parte da sua jornada. Um espaço de escuta pode ajudar você a compreender o que está vivendo, organizar seus sentimentos e encontrar novas formas de lidar com os desafios de estar longe de casa.</p>
         <div class="reassurance">
           <div class="item"><strong>Atendimento online</strong><span>Um espaço de cuidado onde você estiver.</span></div>
@@ -54,9 +53,14 @@
       <div class="action">
         <div class="card">
           <div class="icon">♡</div>
-          <h2>Vamos conversar?</h2>
+          <h2>Iniciar o processo de autocuidado</h2>
           <p>Entre em contato e dê o primeiro passo para cuidar de você.</p>
-          <a class="primary" href="https://wa.me/5521995385187?text=Ol%C3%A1%21%20Cheguei%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer">Quero conversar <span>→</span></a>
+          <a class="primary" href="https://wa.me/55219953885187?text=Ol%C3%A1%21%20Cheguei%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer" aria-label="Iniciar o processo de autocuidado pelo WhatsApp" title="Iniciar o processo de autocuidado pelo WhatsApp">
+            <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M19.11 17.2c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32Z"/>
+              <path fill="currentColor" d="M16.03 4.2a11.7 11.7 0 0 0-10 17.76L4.47 27.4l5.57-1.46a11.7 11.7 0 1 0 5.99-21.74Zm0 21.36c-1.88 0-3.72-.5-5.33-1.45l-.38-.22-3.3.86.88-3.21-.25-.39a9.68 9.68 0 1 1 8.38 4.41Z"/>
+            </svg>
+          </a>
           <div class="privacy"><b>⌑</b><span>Seu contato será tratado com confidencialidade e respeito.</span></div>
         </div>
       </div>
