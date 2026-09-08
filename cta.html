@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vamos conversar? · KORbuild Saúde Mental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#262333;--muted:#777282;--surface:#fff;--accent:#9b83b5;--accent-2:#b59bcf;--accent-soft:#f5eff9;--line:#ebe8f0;--shadow:0 24px 70px rgba(45,35,60,.10)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+    body{background:linear-gradient(135deg,#fcfbfd 0%,#f7f3f9 100%)}
+    header{height:70px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 6%}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px}
+    .brand-name{font-weight:800;letter-spacing:-.03em}.brand-name span{font-weight:500;color:var(--muted)}
+    main{min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center;padding:38px 6% 46px}
+    .shell{width:100%;max-width:1120px;background:var(--surface);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;min-height:620px}
+    .message{padding:70px 68px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.18em;color:var(--accent);margin:0 0 17px}
+    h1{font-size:50px;line-height:1.03;letter-spacing:-.055em;margin:0 0 20px;max-width:620px}
+    .sub{font-size:21px;line-height:1.45;color:#5f5870;margin:0 0 22px;max-width:570px}
+    .copy{font-size:15px;line-height:1.7;color:var(--muted);margin:0 0 34px;max-width:590px}
+    .reassurance{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0 0 38px}
+    .item{border-top:1px solid var(--line);padding-top:14px}.item strong{display:block;font-size:13px;margin-bottom:6px}.item span{font-size:11.5px;line-height:1.5;color:var(--muted)}
+    .quote{background:var(--accent-soft);border-radius:16px;padding:17px 20px;color:#51435f;font-size:15px;line-height:1.45;font-style:italic;max-width:650px}
+    .action{background:linear-gradient(145deg,#40364c,#5b4c68);padding:48px;display:flex;align-items:center;justify-content:center;position:relative}
+    .card{width:100%;max-width:390px;background:rgba(255,255,255,.98);border-radius:24px;padding:38px 30px 30px;text-align:center;box-shadow:0 18px 45px rgba(20,15,28,.18)}
+    .icon{width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font-size:25px}
+    .card h2{font-size:25px;letter-spacing:-.035em;margin:0 0 8px}.card p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 24px}
+    .primary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 18px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;text-decoration:none;font-size:14px;font-weight:700;box-shadow:0 10px 25px rgba(123,98,151,.24)}
+    .divider{display:flex;align-items:center;gap:12px;margin:22px 0 16px;color:#9a94a3;font-size:10px}.divider:before,.divider:after{content:"";height:1px;background:var(--line);flex:1}
+    .secondary{display:flex;align-items:center;justify-content:center;width:100%;padding:13px 16px;border-radius:12px;background:#f7f5fa;color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;margin-top:10px}
+    .privacy{display:flex;gap:8px;justify-content:center;align-items:flex-start;margin:22px 0 0;color:#8a8492;font-size:10.5px;line-height:1.45}.privacy b{font-size:13px;color:var(--accent)}
+    footer{text-align:center;color:#918b99;font-size:10px;padding:0 0 12px}
+    @media(max-width:850px){header{padding:0 20px}.brand-name span{display:none}main{padding:20px 16px 30px}.shell{grid-template-columns:1fr;min-height:auto}.message{padding:46px 30px}.action{padding:30px}.reassurance{grid-template-columns:1fr;gap:18px;margin-bottom:30px}h1{font-size:40px}.sub{font-size:19px}.card{max-width:430px}}
+  </style>
+</head>
+<body>
+  <header><a href="index.html" class="brand"><span class="brand-mark">K</span><span class="brand-name">KOR<span>build</span> · Saúde Mental</span></a></header>
+  <main>
+    <section class="shell">
+      <div class="message">
+        <p class="eyebrow">04 · O PRÓXIMO PASSO</p>
+        <h1>Você não precisa fazer isso sozinho(a).</h1>
+        <p class="sub">Agora que você chegou até aqui, talvez seja hora de conversar.</p>
+        <p class="copy">Cuidar da sua saúde mental também faz parte da sua jornada. Um espaço de escuta pode ajudar você a compreender o que está vivendo, organizar seus sentimentos e encontrar novas formas de lidar com os desafios de estar longe de casa.</p>
+        <div class="reassurance">
+          <div class="item"><strong>Atendimento online</strong><span>Um espaço de cuidado onde você estiver.</span></div>
+          <div class="item"><strong>Em português</strong><span>Para falar sobre sua experiência com liberdade.</span></div>
+          <div class="item"><strong>Com acolhimento</strong><span>Escuta, respeito e ausência de julgamentos.</span></div>
+        </div>
+        <div class="quote">“Dar o primeiro passo também é uma forma de se cuidar.”</div>
+      </div>
+      <div class="action">
+        <div class="card">
+          <div class="icon">♡</div>
+          <h2>Vamos conversar?</h2>
+          <p>Entre em contato e dê o primeiro passo para cuidar de você.</p>
+          <a class="primary" href="#contato">Quero conversar <span>→</span></a>
+          <div class="divider">OU, SE PREFERIR</div>
+          <a class="secondary" href="#whatsapp">Falar pelo WhatsApp</a>
+          <a class="secondary" href="#mensagem">Enviar uma mensagem</a>
+          <div class="privacy"><b>⌑</b><span>Seu contato será tratado com confidencialidade e respeito.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>KORbuild Saúde Mental</footer>
+</body>
+</html>
