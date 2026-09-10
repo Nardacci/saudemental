@@ -9,30 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{--ink:#262333;--muted:#777282;--surface:#fff;--accent:#9b83b5;--accent-2:#b59bcf;--accent-soft:#f5eff9;--line:#ebe8f0;--shadow:0 20px 55px rgba(45,35,60,.09)}
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:var(--ink)}
     body{background:linear-gradient(135deg,#fcfbfd,#f7f3f9)}
-    header{height:70px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 6%}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px;box-shadow:0 8px 20px rgba(155,131,181,.18)}
+    header{height:60px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 6%}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+    .brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px;box-shadow:0 8px 20px rgba(155,131,181,.18)}
     .brand-name{font-weight:800;letter-spacing:-.03em}.brand-name span{font-weight:500;color:var(--muted)}
-    main{min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center;padding:24px 6% 44px}
-    .shell{width:100%;max-width:1180px;background:var(--surface);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.08fr .92fr}
-    .hero{background:linear-gradient(145deg,#40364c,#5b4c68);color:#fff;padding:52px 58px;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;opacity:.72;margin:0 0 13px}
-    .hero h1{font-size:46px;line-height:1.05;letter-spacing:-.05em;margin:0 0 18px}
-    .hero p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.82);max-width:600px;margin:0 0 28px}
-    .actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:max-content}
-    .continue{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-size:14px;font-weight:700;width:max-content;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.45)}
+    main{min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:14px 5% 24px}
+    .shell{width:100%;max-width:1180px;height:min(650px,calc(100vh - 108px));background:var(--surface);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.08fr .92fr}
+    .hero{background:linear-gradient(145deg,#40364c,#5b4c68);color:#fff;padding:38px 50px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{font-size:9px;font-weight:800;letter-spacing:.16em;opacity:.72;margin:0 0 10px}
+    .hero h1{font-size:43px;line-height:1.05;letter-spacing:-.05em;margin:0 0 15px}
+    .hero p{font-size:16px;line-height:1.5;color:rgba(255,255,255,.82);max-width:600px;margin:0 0 22px}
+    .actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:max-content}
+    .continue{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-size:13px;font-weight:700;width:max-content;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.45)}
     .continue:hover{border-bottom-color:#fff}
-    .whatsapp-text{font-size:12px;line-height:1.4;color:rgba(255,255,255,.68);margin:0}
+    .whatsapp-text{font-size:11px;line-height:1.35;color:rgba(255,255,255,.68);margin:0}
     .whatsapp-text a{color:#d85c67;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(216,92,103,.55);padding-bottom:2px}
     .whatsapp-text a:hover{color:#ef737e;border-bottom-color:#ef737e}
-    .side{padding:46px 48px;display:flex;flex-direction:column;justify-content:center}
-    .side h2{font-size:29px;line-height:1.12;letter-spacing:-.04em;margin:0 0 9px}.side>p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
-    .points{display:grid;gap:10px;margin-top:22px}.point{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:13px;background:#fefcff}.point-icon{width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;flex:none}.point strong{display:block;font-size:13px;margin-bottom:3px}.point span{display:block;color:var(--muted);font-size:12px;line-height:1.45}
-    footer{text-align:center;color:#918b99;font-size:10px;padding:0 0 10px}
-    @media(max-width:850px){header{padding:0 20px}main{min-height:calc(100vh - 70px);padding:20px 16px 32px}.shell{grid-template-columns:1fr}.hero{padding:42px 30px}.side{padding:36px 30px}.hero h1{font-size:38px}.brand-name span{display:none}}
+    .side{padding:34px 42px;display:flex;flex-direction:column;justify-content:center}
+    .side h2{font-size:27px;line-height:1.12;letter-spacing:-.04em;margin:0 0 7px}.side>p{color:var(--muted);font-size:13px;line-height:1.5;margin:0}
+    .points{display:grid;gap:8px;margin-top:17px}.point{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fefcff}.point-icon{width:31px;height:31px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:11px;flex:none}.point strong{display:block;font-size:12px;margin-bottom:2px}.point span{display:block;color:var(--muted);font-size:11px;line-height:1.4}
+    footer{text-align:center;color:#918b99;font-size:9px;padding:0 0 7px}
+    @media(max-width:850px){header{padding:0 20px;height:58px}main{min-height:calc(100vh - 58px);padding:14px 14px 24px}.shell{height:auto;grid-template-columns:1fr}.hero{padding:34px 26px}.side{padding:30px 26px}.hero h1{font-size:37px}.brand-name span{display:none}}
   </style>
 </head>
 <body>
@@ -41,7 +40,6 @@
       <span class="brand-mark">K</span><span class="brand-name">KOR<span>build</span> · Saúde Mental</span>
     </a>
   </header>
-
   <main>
     <section class="shell">
       <div class="hero">
