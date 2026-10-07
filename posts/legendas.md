@@ -1,14 +1,12 @@
 # Posts agendados — @psi_flavianardacci
 Todos às 12h (horário de Brasília).
 
-## 13/10 — dia das criancas (7 slides)
+## 13/10 (7 slides)
 
 ```
-Ontem foi Dia das Crianças. Que tal um presente que dura a vida toda? 💜
+A adolescência é uma fase de muitas mudanças, e nem sempre o(a) adolescente consegue explicar o que sente. 💜
 
-Quando a criança aprende a dar nome ao que sente, ela entende melhor as próprias emoções e pede ajuda mais cedo quando algo não vai bem.
-
-Conversar sobre sentimentos é uma forma de proteção.
+Quando aprendemos a dar nome às emoções, pedir ajuda fica mais fácil. E uma conversa sem julgamento pode ser o primeiro passo.
 
 📌 Salve para lembrar.
 📤 Envie para outros pais e responsáveis.
@@ -19,15 +17,15 @@ Atendimento psicológico online para todo o Brasil e brasileiros no exterior. Li
 
 Flávia Nardacci · Psicóloga · CRP 05/75090
 
-#diadascriancas #saudementalinfantil #educacaoemocional #parentalidade #psicologaonline #saudemental
+#adolescencia #saudementaladolescente #educacaoemocional #parentalidade #psicologaonline #saudemental
 ```
 
-## 17/10 — voce nao e um peso (1 imagem)
+## 17/10 (1 imagem)
 
 ```
 Se hoje você sente que é um peso para as pessoas ao seu redor, leia de novo: você não é o peso. Você está carregando um.
 
-E ninguém precisa carregar tudo sozinho. Conversar com alguém de confiança ou buscar ajuda profissional é uma forma de dividir esse peso. 💜
+E ninguém precisa carregar tudo sozinho(a). Conversar com alguém de confiança ou buscar ajuda profissional é uma forma de dividir esse peso. 💜
 
 📤 Envie para alguém que precisa ouvir isso hoje.
 
@@ -40,15 +38,15 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #saudemental #depressao #voceimporta #prevencaodosuicidio #psicologaonline #acolhimento
 ```
 
-## 20/10 — autolesao x tentativa (6 slides)
+## 20/10 (6 slides)
 
 ```
-Autolesão e tentativa de suicídio não são a mesma coisa, mas as duas são sinais de sofrimento intenso e merecem cuidado.
+Autolesão e tentativa de suicídio não são a mesma coisa, mas as duas são formas de lidar com uma dor emocional intensa e merecem cuidado.
 
-Entender a diferença ajuda familiares, amigos e educadores a acolher sem julgamento e a agir na hora certa.
+Entender a diferença ajuda familiares, amigos(as) e educadores(as) a acolher sem julgamento e a agir na hora certa.
 
 📌 Salve para consultar quando precisar.
-📤 Compartilhe com pais, professores e amigos.
+📤 Compartilhe com pais, professores(as) e amigos(as).
 
 Atendimento psicológico online para todo o Brasil e brasileiros no exterior. Link na bio.
 
@@ -59,7 +57,7 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #autolesao #prevencaodosuicidio #saudemental #saudementaladolescente #psicologaonline #informacaosalva
 ```
 
-## 24/10 — plantao me ensinou (5 slides)
+## 24/10 (5 slides)
 
 ```
 Nos plantões da psicologia hospitalar, aprendi que o sofrimento quase nunca começa no dia da crise. Ele costuma chegar devagar, em silêncio.
@@ -75,12 +73,12 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #psicologiahospitalar #bastidores #saudemental #psicologaonline #pedirajuda #psicoterapia
 ```
 
-## 27/10 — filho se machuca (7 slides)
+## 27/10 (7 slides)
 
 ```
-Descobrir que um filho se machuca é assustador. É normal sentir medo, raiva e culpa ao mesmo tempo.
+Descobrir que um(a) filho(a) se machuca é assustador. É normal sentir medo, raiva e culpa ao mesmo tempo.
 
-Mas a forma como você reage nesse momento faz diferença. Acolher, cuidar e buscar ajuda profissional é o caminho mais seguro, para ele e para você.
+Mas a forma como você reage nesse momento faz diferença. Acolher, cuidar e buscar ajuda profissional é o caminho mais seguro, para ele(a) e para você.
 
 📌 Salve este post.
 📤 Envie para outros pais e responsáveis.
@@ -94,7 +92,7 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #autolesao #adolescencia #parentalidade #saudementaladolescente #psicologaonline #orientacaoparapais
 ```
 
-## 31/10 — descansar (1 imagem)
+## 31/10 (1 imagem)
 
 ```
 Num mundo que cobra produtividade o tempo todo, descansar pode parecer culpa. Mas não é.
@@ -112,10 +110,10 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #descanso #autocuidado #saudemental #esgotamento #psicologaonline #cuidarsi
 ```
 
-## 03/11 — luto (6 slides)
+## 02/11 (6 slides)
 
 ```
-No Dia de Finados, a saudade costuma ficar mais forte.
+Hoje é Dia de Finados, e a saudade costuma ficar mais forte.
 
 O luto é um processo natural e não tem prazo. Mas, quando a dor não diminui, a vida perde o sentido ou você se isola de tudo, é hora de buscar apoio.
 
@@ -130,12 +128,14 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #luto #finados #saudade #saudemental #psicologaonline #acolhimento
 ```
 
-## 07/11 — terapia online (6 slides)
+## 07/11 (7 slides)
 
 ```
 Ainda tem dúvidas sobre como funciona a terapia online? Explico passo a passo. 💜
 
 Você pode fazer suas sessões de casa, do trabalho ou de onde estiver, no Brasil ou no exterior, com o mesmo cuidado, ética e sigilo do atendimento presencial.
+
+O que você viveu não precisa continuar doendo no presente.
 
 💬 Ficou alguma dúvida? Pergunte nos comentários.
 
@@ -148,7 +148,7 @@ Flávia Nardacci · Psicóloga · CRP 05/75090
 #terapiaonline #psicologaonline #psicoterapia #brasileirosnoexterior #saudemental #comecarterapia
 ```
 
-## 10/11 — aborrescencia ou depressao (7 slides)
+## 10/11 (7 slides)
 
 ```
 “É só aborrescência.” Será?
