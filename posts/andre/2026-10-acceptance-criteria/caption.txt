@@ -1,0 +1,14 @@
+Vague requirements create rework. 🔁
+
+Good acceptance criteria tell everyone what “done” looks like, before development starts.
+
+Use the Given / When / Then format:
+✅ Given: the starting situation
+✅ When: the user takes an action
+✅ Then: the expected result
+
+💬 Do you write acceptance criteria today? Which format do you use?
+📌 Save this for your next user story.
+➕ Follow for more Business Analysis tips.
+
+#BusinessAnalyst #BusinessAnalysis #AcceptanceCriteria #UserStories #AgileBA #Scrum #ProductOwner #Requirements
