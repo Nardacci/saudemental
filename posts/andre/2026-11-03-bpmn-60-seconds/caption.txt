@@ -1,0 +1,14 @@
+Process diagrams don't have to be complicated. 🔷
+
+5 BPMN symbols to start with:
+⭕ Start event
+⭕ End event
+▭ Task
+◇ Gateway (decision)
+➡️ Sequence flow
+
+💬 Which BPMN symbol do you use the most?
+📌 Save this as a quick reference.
+➕ Follow for more Business Analysis tips.
+
+#BPMN #BusinessAnalyst #BusinessAnalysis #ProcessModeling #ProcessImprovement #DigitalTransformation

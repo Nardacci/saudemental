@@ -1,0 +1,12 @@
+Same words, different jobs. 🧩
+
+A requirement states what the system must do or be.
+A user story describes a need from the user's point of view.
+
+Use both: the story starts the conversation, and the requirements and acceptance criteria add the details.
+
+💬 Which one do you use more at work?
+📌 Save this for your next backlog refinement.
+➕ Follow for more Business Analysis tips.
+
+#BusinessAnalyst #BusinessAnalysis #UserStories #Requirements #AgileBA #Scrum #ProductOwner
