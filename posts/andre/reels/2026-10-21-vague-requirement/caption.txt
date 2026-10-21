@@ -1,0 +1,13 @@
+Client: “Make it user-friendly.” 😅
+BA: “What does that mean?”
+Client: “Fast. Fast-fast.”
+BA: “How fast is fast-fast?”
+Client: “Yesterday.”
+
+Every Business Analyst has been here. The fix? Turn vague wishes into testable sentences with Given / When / Then. ✅
+
+💬 What's the vaguest requirement you've ever received? Tell me below 👇
+📌 Save this for your next refinement meeting.
+➕ Follow for more Business Analysis tips (with a bit of humor).
+
+#BusinessAnalyst #BusinessAnalysis #AcceptanceCriteria #Requirements #AgileBA #Scrum #TechHumor #ProductOwner
