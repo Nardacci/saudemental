@@ -1,0 +1,10 @@
+“As a user, I want a button.” 😬
+Not a story yet. A good user story names the user, the goal and the benefit.
+
+Format: As a [user], I want [goal], so that [benefit].
+
+💬 Share the worst user story you've seen (no company names, please 😉).
+📌 Save this for your next backlog refinement.
+➕ Follow for more Business Analysis tips.
+
+#BusinessAnalyst #UserStories #AgileBA #Scrum #ProductOwner #BusinessAnalysis

@@ -1,0 +1,13 @@
+Before you build anything, ask these 5 questions. 🧭
+
+1️⃣ What problem are we solving?
+2️⃣ Who is affected?
+3️⃣ How will we measure success?
+4️⃣ What is in scope, and what is not?
+5️⃣ What could go wrong?
+
+💬 Which question do you ask first?
+📌 Save this for your next project kickoff.
+➕ Follow for more Business Analysis tips.
+
+#BusinessAnalyst #BusinessAnalysis #ProjectKickoff #Requirements #AgileBA #ProductOwner

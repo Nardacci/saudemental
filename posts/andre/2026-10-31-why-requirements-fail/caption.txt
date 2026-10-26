@@ -1,0 +1,14 @@
+Most requirements don't fail because of bad code. They fail before the first line is written. ⚠️
+
+5 common mistakes:
+1. They describe the solution, not the need
+2. They are vague
+3. Nobody confirms them
+4. They change without a record
+5. Testers see them too late
+
+💬 Which one have you seen the most?
+📌 Save this checklist.
+➕ Follow for more Business Analysis tips.
+
+#BusinessAnalyst #BusinessAnalysis #Requirements #QA #AgileBA #SoftwareDevelopment
