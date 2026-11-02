@@ -11,4 +11,4 @@ Use the Given / When / Then format:
 📌 Save this for your next user story.
 ➕ Follow for more Business Analysis tips.
 
-#BusinessAnalyst #BusinessAnalysis #AcceptanceCriteria #UserStories #AgileBA #Scrum #ProductOwner #Requirements
+#BusinessAnalyst #AcceptanceCriteria #UserStories #Scrum #Requirements

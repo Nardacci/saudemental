@@ -11,4 +11,4 @@ Process diagrams don't have to be complicated. 🔷
 📌 Save this as a quick reference.
 ➕ Follow for more Business Analysis tips.
 
-#BPMN #BusinessAnalyst #BusinessAnalysis #ProcessModeling #ProcessImprovement #DigitalTransformation
+#BusinessAnalyst #BPMN #ProcessModeling #ProcessImprovement #BusinessAnalysis

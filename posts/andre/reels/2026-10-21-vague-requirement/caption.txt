@@ -10,4 +10,4 @@ Every Business Analyst has been here. The fix? Turn vague wishes into testable s
 📌 Save this for your next refinement meeting.
 ➕ Follow for more Business Analysis tips (with a bit of humor).
 
-#BusinessAnalyst #BusinessAnalysis #AcceptanceCriteria #Requirements #AgileBA #Scrum #TechHumor #ProductOwner
+#BusinessAnalyst #AcceptanceCriteria #Agile #TechHumor #ProductOwner
